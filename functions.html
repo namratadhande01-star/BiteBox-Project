@@ -24,16 +24,78 @@
         //console.log(a === b);// strickt checking of memory location
         //console.log(a === c);//strick checking of memory location
 
-         let a = ["Gopal", 25, "Kalyan"];
+
+
+        let a = ["Gopal", 25, "Kalyan"];
         console.log("Original Array: " + a);
         console.log("My name is: " + a[0] + " Age: " + a[1] + " Location: " + a[2]);
-        a.push("DevOps Engineer");
+        a.push("DevOps Engineer");//push
         console.log(a);
-        a.pop();
+        a.pop();//pop
         console.log(a);
         a.splice(2, 0, "FullStack");
         console.log(a);
-        
+
+
+
+
+        //Dates
+        const d = new Date();
+        console.log(d);
+        console.log(d.getDay());
+
+
+
+        //first class Funstion
+        let increment = 3000
+        function income(salary) {
+            let total = salary * 2;
+            retrun total;
+        }
+        let salary = income(30000);//first class function
+        console.log(salary);
+
+        //Higher order Function
+        function repeat(action, times) {
+            for (i = 0; i < times; i++) {
+                action();
+            }
+            return "existed sucessfully";
+        }
+        function sayHello() {
+            console.log("hello!");
+        }
+        let result = repeat(sayHello, 5);
+        console.log(result);
+
+
+
+
+        //Arrow Function
+        const greet = (name, age) => { return `Hello, ${name} and you are ${age} year old`; }
+        console.log(greet("Namrata", 30))
+
+
+        const greet = (name = "Namrata", age = 25) => { return `Hello, ${name} and you are ${age} year old`; }//by default values pass kr skte ho 
+        console.log(greet("Namrata", 30))
+
+            //Anonymous function
+            (function () {
+                console.log(Hello!);
+            })();//limit->defintion end hote hi cll krna hai
+
+
+        //Math Function
+        let num = 123.4567;
+        console.log(num.toFixed(2));
+        console.log(num.toPrecision(4));
+        console.log(Math.round(num));
+        console.log(Math.floor(num));
+        console.log(Math.ceil(num));
+
+
+
+
     </script>
 </body>
 
