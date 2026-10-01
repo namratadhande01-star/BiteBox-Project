@@ -103,7 +103,60 @@
         console.log(totalChars);
 
 
+        let name = "Hello Hello Good Morning"; // immutable
+        let cars = ["volvo", "maruti", "BMW", "XUV"];
+        let age = 50;
+        console.log(name.replace("Hello", "Hi")); // replaces first occurance
+        console.log(name.replaceAll("Hello", "Hi")); // replaces all the occurance
+        console.log(name);
+
+        console.log(name.indexOf("Good")); // return the index of first character
+        console.log(name.valueOf()); // no need to call it explicitly
+
+        console.log(name.startsWith("Hello")); // it checks the starting character oo string
+        console.log(name.endsWith("Hello")); // it checks the ending character of string
+
+        console.log(name.substr(name.indexOf("G"), name.indexOf("G") - 7)); // it will extarct specific part of a string (startIndex, length)
+        console.log(name.substring(12, 16)); // it extracts the characted between two indexs
+
+        console.log(name.split(" ")); // it converts string to an array
+        console.log(cars.join(" ")); // it converts array to a string
+
+        console.log(window.screen); // it will retrun all the properties of screen
+
+        console.warn("Thi is a warning"); // shows message as a warning in console
+        console.error("This is a error"); // shows message as a error in console
+
+        console.log(location.href); //it will return full url of the webpage
+        console.log(location.hostname); // it will return domain name
+        console.log(location.pathname); // it will return the path
+
+
+        const btn = document.getElementById("btnClick");
+
+        btn.addEventListener("mouseout", function () {
+            document.querySelector("#msg").innerHTML = "Sending OTP...";
+            console.log("Clicked");
+
+            setTimeout(() => {
+                document.querySelector("#msg").innerHTML = "OTP Sent ✔";
+            }, 3000);
+        });
+
+        let count = 0;
+
+        // setInterval(() => {
+        //     count++;
+        //     document.getElementById("count").innerText = count;
+        // }, 1000);
+
+        // history.forward(); // take one step ahead        
+
     </script>
+
+
+
+    <!-- <p>New Notifications: <span id="count">0</span></p> -->
 </body>
 
 </html>
